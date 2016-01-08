@@ -22,4 +22,4 @@ ADD proxy.sh /root/proxy.sh
 EXPOSE 22
 EXPOSE 8001-8010
 #CMD ["/usr/sbin/sshd", "-D"]
-CMD sh proxy.sh && /usr/sbin/sshd -D
+CMD sh /root/proxy.sh && /usr/sbin/sshd -D
