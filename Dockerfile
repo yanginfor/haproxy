@@ -18,7 +18,8 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 RUN apt-get install -y haproxy
 ADD hap.conf /root/hap.conf
 ADD proxy.sh /root/proxy.sh
-
+ENV SS_HOST
+ENV SS_PORT
 EXPOSE 22
 EXPOSE 8001-8010
 #CMD ["/usr/sbin/sshd", "-D"]
